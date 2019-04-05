@@ -24,11 +24,11 @@ end
 
 def initial_round
   card_total = deal_card + deal_card
-  display_card_total(card_total)
+  display_card_total (card_total)
   card_total
 end
 
-def hit?(card_total)
+def hit? (card_total)
   prompt_user
   input = get_user_input
   
@@ -38,7 +38,7 @@ def hit?(card_total)
     card_total
   elsif
     invalid_command
-    hit?(hard_total)
+    hit? (hard_total)
   end
 end
 
@@ -55,14 +55,14 @@ def runner
   card_total = initial_round
   
   if card_total == 21
-    display_card_total(card_total)
+    display_card_total (card_total)
     puts "Congrats! You won!"
   end
   
   until card_total > 21
-  card_total = hit(card_total)
-  display_card_total(card_total)
+  card_total = hit? (card_total)
+  display_card_total (card_total)
   end
-  end_game(card_total)
+  end_game (card_total)
 end
     
