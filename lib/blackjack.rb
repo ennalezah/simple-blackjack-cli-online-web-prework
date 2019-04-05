@@ -55,7 +55,9 @@ def runner
   card_total = initial_round
   
   if card_total == 21
-    puts "Congrats! You hit Blackjack"
+    display_card_total(card_total)
+    puts "Congrats! You won!"
+  end
   
   until card_total > 21
   card_total = hit(card_total)
