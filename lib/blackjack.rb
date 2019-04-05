@@ -38,6 +38,7 @@ def hit?(card_total)
     card_total
   elsif
     invalid_command
+    hit?(hard_total)
   end
 end
 
